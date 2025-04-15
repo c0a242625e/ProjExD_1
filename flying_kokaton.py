@@ -21,9 +21,8 @@ def main():
             if event.type == pg.QUIT: return
         key_lst = pg.key.get_pressed() #練習10-3
 
-        y=-1
+        y=0
         z=0
-        
         if key_lst[pg.K_UP]:
            y=0
            z=-1 #練習10-4
@@ -31,13 +30,13 @@ def main():
             y=0
             z=1
         if key_lst[pg.K_LEFT]:
-            y=-2
+            y=-1
             z-0
         if key_lst[pg.K_RIGHT]:
-            y=1
+            y=2
             z-0
 
-        kk_rct.move_ip(y,z)
+        kk_rct.move_ip(-1+y,0+z)
         x = tmr%3200
         screen.blit(bg_img, [-x, 0]) #練習6
         screen.blit(bg_img2,[-x+1600,0]) #練習7
